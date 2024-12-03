@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useDark } from '@vueuse/core'
 import { ConfigProvider } from 'radix-vue'
 import '@unocss/reset/tailwind-compat.css'
 
@@ -14,7 +13,7 @@ useHead({
 </script>
 
 <template>
-  <ConfigProvider :use-id="useIdFunction" :class="{ dark: useDark() }">
+  <ConfigProvider :use-id="useIdFunction">
     <NuxtLoadingIndicator />
     <VitePwaManifest />
     <NuxtLayout>
