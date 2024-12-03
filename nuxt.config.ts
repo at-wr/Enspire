@@ -1,7 +1,8 @@
 export default defineNuxtConfig({
   nitro: {
     experimental: {
-      openAPI: true,
+      // TODO: Track nuxt/content#2839. Waiting for a new release.
+      openAPI: false,
     },
     storage: {
       github: {
