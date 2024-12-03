@@ -168,6 +168,9 @@ importers:
       '@unocss/nuxt':
         specifier: 0.65.0-beta.2
         version: 0.65.0-beta.2(magicast@0.3.5)(postcss@8.4.47)(rollup@4.24.0)(vite@5.4.9(@types/node@22.7.7)(terser@5.36.0))(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)(webpack@5.96.1(esbuild@0.23.1))
+      '@unocss/postcss':
+        specifier: ^0.65.0
+        version: 0.65.0(postcss@8.4.47)
       dayjs-nuxt:
         specifier: ^2.1.11
         version: 2.1.11(magicast@0.3.5)(rollup@4.24.0)(webpack-sources@3.2.3)
@@ -2820,9 +2823,16 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
+  '@unocss/config@0.65.0':
+    resolution: {integrity: sha512-nprE4G0HfhQD9+lJv6g91p7U47+2IbFnTo+RfTdkn1NDKNptGBYhcYIn1AlyRlS7MOjU3IlyNBG5rfv1vK77mw==}
+    engines: {node: '>=14'}
+
   '@unocss/config@0.65.0-beta.2':
     resolution: {integrity: sha512-Nep84MckXHjTIuOL+tnPCe7bWELd7aTSEB5sApkWnRvF5n62K1QYIL/riciG6mVNYs5f/cxbI3JX6OjcD+nJ/A==}
     engines: {node: '>=14'}
+
+  '@unocss/core@0.65.0':
+    resolution: {integrity: sha512-2QwjMq/bm7lbxk6BTyGblWuTtSfXRuHJSoN1zys53ES+SrVVYA8FVDIpiTQbxENLcXhwwq1OaN3z7zi714n+OA==}
 
   '@unocss/core@0.65.0-beta.2':
     resolution: {integrity: sha512-Wq2IbocJrHx6QXBxSQLkqIzZbDMVAELC/NeMTxFj3OjtrfrjjPI/X/WTaOyBEtwTs6jLi7hBZ7kRYHy5AxKoyQ==}
@@ -2839,6 +2849,12 @@ packages:
 
   '@unocss/nuxt@0.65.0-beta.2':
     resolution: {integrity: sha512-RWvxhtDJIglTXJrvbqHHBhpKIrfgb24L4FulV5ZjEJtCEvjGTJTDz289n+imOBNeH6sF42Y8DLoIVAWjoDLUWA==}
+
+  '@unocss/postcss@0.65.0':
+    resolution: {integrity: sha512-pJIJvPIkBOZLKxZ2viUvF3kCQEPSt3iVXdhWjXt5SMQuPei0hyNXZhN8hEYPWFA5Jv8njXlsQQQMd/tEEALTHQ==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      postcss: ^8.4.21
 
   '@unocss/postcss@0.65.0-beta.2':
     resolution: {integrity: sha512-iicf2VSPKJoXtvgxD6wbBgnlXANJdKvhj7IyWcLAgnSXUwd+qoUJmAkIv86f5ilb8PitjYRIeS1/dJs+FXUryQ==}
@@ -2872,6 +2888,10 @@ packages:
 
   '@unocss/reset@0.65.0-beta.2':
     resolution: {integrity: sha512-Ur2wQZkJxnA6ib5k1TGtH0MzYI8U9o7COEKSIUZnJF5P2+f+8rLUDOg2jWkwe0mopzwXdwyDS+cDaIEnkg2dIQ==}
+
+  '@unocss/rule-utils@0.65.0':
+    resolution: {integrity: sha512-a9glvClBhyhp7ORsmjViTZRWkXbYiuhGEKqMG83vD8JWI7yrVQ2WyVbHdqCjBpxzprdzY2nYD+cUHk3hS0HUgg==}
+    engines: {node: '>=14'}
 
   '@unocss/rule-utils@0.65.0-beta.2':
     resolution: {integrity: sha512-MLNjy6+xJp4kIkqbBTAU85gq2SYJ+raXwQAt6Pikh7dcKS0Krvq0rySAwgKSy2/ut3DQecE82BJAAVRQOQGEMw==}
@@ -11207,12 +11227,21 @@ snapshots:
       - rollup
       - supports-color
 
+  '@unocss/config@0.65.0':
+    dependencies:
+      '@unocss/core': 0.65.0
+      unconfig: 0.5.5
+    transitivePeerDependencies:
+      - supports-color
+
   '@unocss/config@0.65.0-beta.2':
     dependencies:
       '@unocss/core': 0.65.0-beta.2
       unconfig: 0.5.5
     transitivePeerDependencies:
       - supports-color
+
+  '@unocss/core@0.65.0': {}
 
   '@unocss/core@0.65.0-beta.2': {}
 
@@ -11267,6 +11296,17 @@ snapshots:
       - vue
       - webpack
       - webpack-sources
+
+  '@unocss/postcss@0.65.0(postcss@8.4.47)':
+    dependencies:
+      '@unocss/config': 0.65.0
+      '@unocss/core': 0.65.0
+      '@unocss/rule-utils': 0.65.0
+      css-tree: 3.0.1
+      postcss: 8.4.47
+      tinyglobby: 0.2.10
+    transitivePeerDependencies:
+      - supports-color
 
   '@unocss/postcss@0.65.0-beta.2(postcss@8.4.47)':
     dependencies:
@@ -11325,6 +11365,11 @@ snapshots:
       '@unocss/rule-utils': 0.65.0-beta.2
 
   '@unocss/reset@0.65.0-beta.2': {}
+
+  '@unocss/rule-utils@0.65.0':
+    dependencies:
+      '@unocss/core': 0.65.0
+      magic-string: 0.30.12
 
   '@unocss/rule-utils@0.65.0-beta.2':
     dependencies:

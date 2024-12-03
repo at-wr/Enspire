@@ -20,6 +20,9 @@ export default defineConfig({
   // If you want to extract them, use the following configuration.
   // It's necessary to add the following configuration if you use shadcn-vue or shadcn-svelte.
   content: {
+    filesystem: [
+      '**/*.{html,js,ts,jsx,tsx,vue,svelte,astro}',
+    ],
     pipeline: {
       include: [
         // the default
