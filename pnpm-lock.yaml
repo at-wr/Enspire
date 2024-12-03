@@ -132,6 +132,15 @@ importers:
       '@changesets/changelog-github':
         specifier: ^0.5.0
         version: 0.5.0
+      '@iconify-json/charm':
+        specifier: ^1.2.1
+        version: 1.2.1
+      '@iconify-json/material-symbols':
+        specifier: ^1.2.8
+        version: 1.2.8
+      '@iconify-json/ph':
+        specifier: ^1.2.1
+        version: 1.2.1
       '@netlify/blobs':
         specifier: ^8.1.0
         version: 8.1.0
@@ -1594,6 +1603,15 @@ packages:
   '@humanwhocodes/retry@0.3.1':
     resolution: {integrity: sha512-JBxkERygn7Bv/GbN5Rv8Ul6LVknS+5Bp6RgDC/O8gEBU/yeH5Ui5C/OlWrTb6qct7LjjfT6Re2NxB0ln0yYybA==}
     engines: {node: '>=18.18'}
+
+  '@iconify-json/charm@1.2.1':
+    resolution: {integrity: sha512-BB9cI5YlAx0pfnukaM4JVIXGvGjIrq/tr9RHDElHXcoZku1ZLd3G2Dn7vqhYLkHl4x2ZX23gbKwX22aEs8xdfw==}
+
+  '@iconify-json/material-symbols@1.2.8':
+    resolution: {integrity: sha512-X89QwN5eRMVHEfm5HWMYCZxkUqUPQM2TNv7D8rIPUn2jTzDmgjgiTMomn3DOXWyh1/geHPnTt1bTSFcUXlpGbw==}
+
+  '@iconify-json/ph@1.2.1':
+    resolution: {integrity: sha512-x0DNfwWrS18dbsBYOq3XGiZnGz4CgRyC+YSl/TZvMQiKhIUl1woWqUbMYqqfMNUBzjyk7ulvaRovpRsIlqIf8g==}
 
   '@iconify/collections@1.0.472':
     resolution: {integrity: sha512-InZG7/qgqzkmlGVlXojDmH84Z84k6ohYIdYjmBkFs/F9bQ/935Df3dNv3iTMQX+j+d3fKMTV903QXdCdbkGiog==}
@@ -9845,6 +9863,18 @@ snapshots:
   '@humanwhocodes/module-importer@1.0.1': {}
 
   '@humanwhocodes/retry@0.3.1': {}
+
+  '@iconify-json/charm@1.2.1':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/material-symbols@1.2.8':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/ph@1.2.1':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify/collections@1.0.472':
     dependencies:
