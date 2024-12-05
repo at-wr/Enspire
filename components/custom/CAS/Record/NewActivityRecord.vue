@@ -144,7 +144,7 @@ const onSubmit = handleSubmit(async (values) => {
 
         <FormField name="date">
           <FormItem class="flex flex-col">
-            <FormLabel>{{ t('activityDate') }}</FormLabel>
+            <FormLabel>活动日期</FormLabel>
             <Popover>
               <PopoverTrigger as-child>
                 <FormControl>

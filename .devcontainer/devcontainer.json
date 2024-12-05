@@ -24,5 +24,7 @@
         "-esbenp.prettier-vscode"
       ]
     }
-  }
+  },
+
+  "appPort": [3000]
 }
