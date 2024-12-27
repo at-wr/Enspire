@@ -162,6 +162,8 @@ const sidebarData = ref({
             <SidebarMenuItem
               v-for="item in sidebarData.school"
               :key="item.name"
+              class="rounded"
+              :class="{ 'bg-foreground/10': $route.path === item.url }"
             >
               <SidebarMenuButton as-child>
                 <NuxtLink :href="item.url">
