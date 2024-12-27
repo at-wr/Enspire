@@ -1,9 +1,5 @@
 <script setup lang="ts">
 import type { AllClubs } from '@@/types/api/user/all_clubs'
-import {
-  ChevronRight,
-  ChevronsUpDown,
-} from 'lucide-vue-next'
 import { useClerk, useUser } from 'vue-clerk'
 
 const { user } = useUser()
@@ -270,7 +266,7 @@ const sidebarData = ref({
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
-    <SidebarInset>
+    <SidebarInset class="h-full flex">
       <slot />
     </SidebarInset>
   </SidebarProvider>

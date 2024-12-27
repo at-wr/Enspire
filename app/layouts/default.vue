@@ -19,14 +19,14 @@ if (clubs.value) {
 
 <template>
   <CustomSidebar>
-    <header class="group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 h-16 flex shrink-0 items-center gap-2 transition-[width,height] ease-linear">
+    <header class="group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 sticky top-0 z-20 h-14 flex shrink-0 items-center gap-2 bg-background transition-[width,height] ease-linear">
       <div class="flex items-center gap-2 px-4">
         <SidebarTrigger class="-ml-1" />
         <Separator orientation="vertical" class="mr-2 h-4" />
         <CustomBreadcrumb />
       </div>
     </header>
-    <ScrollArea class="h-full w-full px-4 pt-8 lg:px-8">
+    <ScrollArea class="z-10 w-full flex-1 px-4 pt-6 lg:px-8">
       <div class="pb-24">
         <main>
           <slot />

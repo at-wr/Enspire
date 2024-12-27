@@ -26,6 +26,8 @@ useHead({
 
 <template>
   <ConfigProvider :use-id="useIdFunction">
+    <NuxtLoadingIndicator />
+    <VitePwaManifest />
     <div v-if="!isClerkLoaded || isEnspireLoading" class="absolute z-100 h-screen w-screen bg-background">
       <div class="h-full w-full flex flex-col items-center justify-center space-y-6">
         <div class="flex justify-center space-x-1">
@@ -39,8 +41,6 @@ useHead({
     </div>
     <div>
       <NuxtLayout class="z-10">
-        <NuxtLoadingIndicator />
-        <VitePwaManifest />
         <NuxtPage />
       </NuxtLayout>
     </div>
