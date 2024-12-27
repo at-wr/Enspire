@@ -56,7 +56,7 @@ useHead({
 
 /* TODO: Weird that this border-color is ignored by Unocss. Might need to investigate further. */
 * {
-  border-color: hsl(var(--border)) !important;
+  border-color: hsl(var(--border));
 }
 
 @media (prefers-color-scheme: light) {

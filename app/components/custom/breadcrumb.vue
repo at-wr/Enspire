@@ -22,7 +22,6 @@ watch(() => route.path, () => {
       }
     }
   })
-  console.log(breadcrumbs.value)
 }, { immediate: true })
 </script>
 

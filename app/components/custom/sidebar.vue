@@ -194,7 +194,9 @@ const sidebarData = ref({
                     <SidebarMenuSubItem
                       v-for="subItem in item.items"
                       :key="subItem.title"
+                      class="flex items-center"
                     >
+                      <div v-if="$route.path === subItem.url" class="border-text mr-2 h-4 w-1 border-l-2 border-foreground rounded -ml-3" />
                       <SidebarMenuSubButton as-child>
                         <NuxtLink :href="subItem.url">
                           <span>{{ subItem.title }}</span>
