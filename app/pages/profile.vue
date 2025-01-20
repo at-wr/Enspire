@@ -102,7 +102,7 @@ onMounted(() => {
                 </AvatarFallback>
               </Avatar>
               <div>
-                👋 Hi, {{ user?.firstName }}!
+                👋🏻 Hi, {{ user?.firstName }}!
                 <div class="text-base font-normal text-muted-foreground">
                   {{ user?.primaryEmailAddress }}
                 </div>
