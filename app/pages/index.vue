@@ -111,7 +111,7 @@ watch(clubs, async () => {
         <CardHeader>
           <CardTitle class="flex items-center gap-2">
             <Icon name="lucide:clock" class="h-5 w-5 text-primary" />
-            CAS 时间
+            活动记录时间
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -123,7 +123,7 @@ watch(clubs, async () => {
             <div class="text-2xl font-bold">
               {{ totalCASHours }}
             </div>
-            <p class="mt-1 text-xs text-muted-foreground">总计 CAS 时间（小时）</p>
+            <p class="mt-1 text-xs text-muted-foreground">总计活动时间（小时）</p>
           </div>
         </CardContent>
       </Card>
